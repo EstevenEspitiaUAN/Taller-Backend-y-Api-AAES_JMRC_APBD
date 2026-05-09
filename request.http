@@ -1,0 +1,40 @@
+GET http://localhost:3000/products HTTP/1.1
+
+
+###
+GET http://localhost:3000/products/2 HTTP/1.1
+
+###
+POST http://localhost:3000/products HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Libro Cálculo de una variable",
+    "description": "Libro usado, algunas páginas subrayadas",
+    "price": 40000,
+    "status": "disponible",
+    "contact": "usuario2@uan.edu.co"
+}
+###
+PUT http://localhost:3000/products/12 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Multimetro",
+    "description": "Multimetro analogo",
+    "price": 40000,
+    "status": "disponible",
+    "contact": "jmatias@uan.edu.co"
+}
+
+
+### PATCH
+PATCH http://localhost:3000/products/1/status
+Content-Type: application/json
+
+{
+  "status": "vendido"
+}
+
+###
+DELETE http://localhost:3000/products/1
