@@ -2,6 +2,15 @@
 
 API REST desarrollada con Node.js, Express y TypeScript para la gestión de artículos publicados en una plataforma tipo marketplace universitario SWAP.
 
+| Método | Ruta            | Descripción                                           |
+| ------ | --------------- | ----------------------------------------------------- |
+| GET    | `/`             | Retorna el mensaje principal de bienvenida de la API. |
+| GET    | `/products`     | Obtiene todos los productos registrados.              |
+| GET    | `/products/:id` | Obtiene un producto específico según su ID.           |
+| POST   | `/products`     | Crea un nuevo producto.                               |
+| PUT    | `/products/:id` | Actualiza la información de un producto existente.    |
+| DELETE | `/products/:id` | Elimina un producto según su ID.                      |
+
 # Descripción
 
 Este proyecto corresponde al Taller 3 de la asignatura, donde se implementa una API REST utilizando Node.js y TypeScript.
