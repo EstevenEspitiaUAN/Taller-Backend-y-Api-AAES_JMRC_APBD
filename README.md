@@ -2,17 +2,13 @@
 
 API REST desarrollada con Node.js, Express y TypeScript para la gestión de artículos publicados en una plataforma tipo marketplace universitario SWAP.
 
----
-
-# 📌 Descripción
+# Descripción
 
 Este proyecto corresponde al Taller 3 de la asignatura, donde se implementa una API REST utilizando Node.js y TypeScript.
 
 La información se almacena temporalmente en un archivo `db.json`, simulando una base de datos sencilla sin utilizar motores como MySQL o MongoDB.
 
----
-
-# 👥 Público objetivo
+# Público objetivo
 
 Estudiantes universitarios que desean publicar, vender o intercambiar artículos académicos y tecnológicos.
 
@@ -24,9 +20,7 @@ Ejemplos:
 - Accesorios tecnológicos
 - Material académico
 
----
-
-# 🎯 Objetivo del proyecto
+# Objetivo del proyecto
 
 Permitir la gestión de productos mediante endpoints REST para:
 
@@ -35,9 +29,7 @@ Permitir la gestión de productos mediante endpoints REST para:
 - Actualizar artículos
 - Eliminar productos
 
----
-
-# ⚙️ Tecnologías utilizadas
+# Tecnologías utilizadas
 
 - Node.js
 - Express
@@ -46,9 +38,7 @@ Permitir la gestión de productos mediante endpoints REST para:
 - body-parser
 - JSON como almacenamiento local
 
----
-
-# 📂 Estructura del proyecto
+# Estructura del proyecto
 
 ```bash
 MY-API-SWAP/
@@ -61,13 +51,15 @@ MY-API-SWAP/
 └── README.md
 
 
+Servidor:
 
-📜 Scripts npm
+http://localhost:3000
+Scripts npm
 Script	Descripción
 npm run dev	Ejecuta el servidor en desarrollo
 npm run build	Compila TypeScript a JavaScript
 npm start	Ejecuta la versión compilada
-📋 Modelo de datos
+Modelo de datos
 Producto
 interface Product {
   id: number;
@@ -77,7 +69,7 @@ interface Product {
   status?: string;
   contact?: string;
 }
-📌 Endpoints implementados
+Endpoints implementados
 1. Ruta principal
 GET /
 
@@ -158,7 +150,7 @@ Response 404
 {
   "error": "Producto no encontrado"
 }
-📑 Inventario de endpoints
+Inventario de endpoints
 Método	Ruta	Descripción	Autenticación
 GET	/	Mensaje de bienvenida	No
 GET	/products	Obtener todos los productos	No
@@ -166,13 +158,13 @@ GET	/products/:id	Obtener producto por ID	No
 POST	/products	Crear producto	No
 PUT	/products/:id	Actualizar producto	No
 DELETE	/products/:id	Eliminar producto	No
-🔐 Seguridad
+Seguridad
 
 Actualmente ningún endpoint requiere autenticación.
 
 Endpoint	Requiere Token
 Todos	No
-⚠️ Validaciones implementadas
+Validaciones implementadas
 Verificación de existencia del producto.
 Manejo básico de errores.
 Validación de nombre obligatorio en POST.
@@ -181,7 +173,7 @@ Respuestas HTTP:
 201 Created
 400 Bad Request
 404 Not Found
-🧪 Ejemplos con CURL
+Ejemplos con CURL
 Obtener todos los productos
 curl http://localhost:3000/products
 Obtener producto por ID
@@ -204,7 +196,7 @@ curl -X PUT http://localhost:3000/products/1 \
 }'
 Eliminar producto
 curl -X DELETE http://localhost:3000/products/1
-📮 Colección de Postman
+Colección de Postman
 
 La colección de Postman incluye:
 
@@ -213,19 +205,19 @@ GET /products/:id
 POST /products
 PUT /products/:id
 DELETE /products/:id
-📌 Endpoints implementados vs documentados
-✅ Implementados
+Endpoints implementados vs documentados
+Implementados
 GET /
 GET /products
 GET /products/:id
 POST /products
 PUT /products/:id
 DELETE /products/:id
-📝 Solo documentados
+Solo documentados
 
 Actualmente todos los endpoints documentados fueron implementados.
 
-👨‍💻 Autor
+Autor
 
 Proyecto académico desarrollado para el Taller 3.
 
